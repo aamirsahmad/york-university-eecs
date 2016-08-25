@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">StringMining</string>
+    <string name="input1_prompt">Starting Income</string>
+    <string name="input2_prompt">Income Increment</string>
+    <string name="input3_prompt">#of Rows</string>
+    <string name="output1_prompt">Monthly Payment:</string>
+    <string name="output2_prompt">Output #2:</string>
+    <string name="action_settings">Settings</string>
+</resources>

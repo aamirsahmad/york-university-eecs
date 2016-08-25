@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export JAVA_HOME=/eecs/local/pkg/jdk-1.8.0_91
+export GRADLE_HOME=/eecs/local/pkg/gradle-2.13
+export PATH=${JAVA_HOME}/bin:${GRADLE_HOME}/bin:${PATH}
+
+gradle clean2030
+gradle build javadoc eclipse test run jar
+
+java -jar -Djava.util.concurrent.ForkJoinPool.common.parallelism=6 ./build/libs/UUIDFactory-1.0-SNAPSHOT.jar

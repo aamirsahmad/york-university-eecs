@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pig Latin</string>
+
+    <string name="hello_world">Enter text here...</string>
+    <string name="action_settings">Settings</string>
+    <string name="convert">Translate</string>
+    <string name="speak">Speak</string>
+    <string name="clear">Clear</string>
+</resources>

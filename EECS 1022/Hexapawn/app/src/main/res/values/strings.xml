@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Hexapawn</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="white_wins">White wins!</string>
+    <string name="black_wins">Black wins!</string>
+    <string name="play_game">Play HexaPawn</string>
+</resources>

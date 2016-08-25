@@ -1,0 +1,57 @@
+group 'ca.mohaghegh.navid'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.5'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.5'
+}
+
+mainClassName = "Main"
+
+jar {
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    manifest {
+        attributes 'Main-Class': 'Main'
+    }
+}
+
+
+run {
+    if (System.getProperty('DEBUG', 'false') == 'true') {
+        jvmArgs '-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9095'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13'
+}
+
+task clean2030 << {
+    println ">>Calling gradle clean ..."
+    tasks.clean.execute()
+    tasks.cleanEclipse.execute()
+    println ">>Calling delete on all the build directories ..."
+    delete 'bin', 'build', '.classpath', '.gradle', 'gradle', '.project', '.settings', 'gradle-app.setting', '.idea', 'gradlew', 'gradlew.bat'
+}
+
+task help2030 << {
+    println ">>You can run: gradle build javadoc eclipse test run jar"
+    println ">>Or simply list all available tasks: gradle tasks"
+    println ">>Or even use gradle gui: gradle --gui"
+    println ">>To clean the project use: gradle clean2030"
+}
+
+
+//file structure follows "gradle init --type java-library"

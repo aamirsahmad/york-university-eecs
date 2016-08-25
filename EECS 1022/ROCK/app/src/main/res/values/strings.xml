@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Rock, paper, scissors</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_launch">Start !</string>
+    <string name="button_re">Play Again</string>
+    <string name="button_text">GO !</string>
+    <string name="info">Tap the GO button\n  Repeat 3 times</string>
+
+</resources>

@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:weightSum="1"
+              tools:context=".PigLatinActivity">
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"/>
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45">
+
+        <TextView
+            android:id="@+id/convertedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/speakButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:onClick="speak"
+            android:text="@string/speak"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            />
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:onClick="clear"
+            android:text="@string/clear"
+            />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            />
+
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:onClick="translate"
+            android:text="@string/convert"/>
+    </LinearLayout>
+
+</LinearLayout>

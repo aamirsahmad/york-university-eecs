@@ -1,0 +1,96 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/layout">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:text="Enter string to analyze ..."
+        android:textStyle="italic"
+        android:textSize="23dp"/>
+
+    <EditText
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:text="Enter character to count"
+        android:textStyle="italic"
+        android:textSize="23dp"/>
+
+    <EditText
+        android:id="@+id/character"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="28dp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:text="Enter substring to count"
+        android:textStyle="italic"
+        android:textSize="23dp"/>
+
+    <EditText
+        android:id="@+id/substring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="28dp"
+        android:textStyle="italic"/>
+
+    <Button
+        android:id="@+id/compute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Analyze"/>
+
+    <TextView
+        android:id="@+id/output0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/output1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/output2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/output3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:textStyle="italic"/>
+
+</LinearLayout>
